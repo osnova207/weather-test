@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import './header';
+@import './weather-modal';
+@import './add-city';
+@import './cities-list';

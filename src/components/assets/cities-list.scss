@@ -1,0 +1,32 @@
+.cities-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+
+  .city-row {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 auto 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2091b3;
+
+    &__label {
+      font-weight: bold;
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 10px;
+    }
+
+    &__controls {
+      display: flex;
+      width: 170px;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+  }
+}

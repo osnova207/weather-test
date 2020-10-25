@@ -1,0 +1,35 @@
+.add-city {
+  padding: 10px;
+
+  &__form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &_label {
+      margin: 0
+    }
+
+    &_input {
+      max-width: 300px;
+      margin: 0 10px
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .add-city {
+    &__form {
+      flex-flow: column nowrap;
+
+      &_input {
+        margin: 10px 0;
+      }
+
+      &_submit {
+        width: 200px;
+      }
+    }
+  }
+}
