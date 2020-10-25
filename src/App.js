@@ -23,7 +23,10 @@ class App extends Component {
                     .then((weather) => this.props.dispatch(appActions.addCurrentWeather(weather)))
                     .catch(() => this.props.dispatch(appActions.addCurrentWeather({error: true})))
             })
-            .catch(() => this.props.dispatch(appActions.addCurrentLocation({error: true})))
+            .catch(() => {
+                this.props.dispatch(appActions.addCurrentLocation({error: true}));
+                this.props.dispatch(appActions.addCurrentWeather({error: true}));
+            })
     }
 
     render() {
