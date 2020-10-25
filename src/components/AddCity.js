@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Button} from "react-bootstrap";
 
 const AddCity = (props) => {
 
@@ -14,9 +15,13 @@ const AddCity = (props) => {
 
     return (
         <div className="add-city">
-            <form onSubmit={(e) => onSubmit(e)}>
+            <form
+                onSubmit={(e) => onSubmit(e)}
+                className="add-city__form"
+            >
                 <label
                     htmlFor="city"
+                    className="add-city__form_label"
                 >
                     Enter city name:
                 </label>
@@ -26,12 +31,16 @@ const AddCity = (props) => {
                     type="text"
                     value={value}
                     onChange={(e) => onChange(e)}
+                    className="add-city__form_input form-control"
                 />
-                 <button
+                <Button
+                    variant="primary"
+                    disabled={value === ''}
                     type="submit"
-                 >
+                    className="add-city__form_submit"
+                >
                     Save
-                 </button>
+                </Button>
             </form>
         </div>
     )
